@@ -1,12 +1,13 @@
-package com.example.universidad_soa.service.impl;
+package com.example.cursos_api.service.impl;
 
-import com.example.universidad_soa.entity.Curso;
-import com.example.universidad_soa.repository.CursoRepository;
-import com.example.universidad_soa.service.CursoService;
+import com.example.cursos_api.entity.Curso;
+import com.example.cursos_api.repository.CursoRepository;
+import com.example.cursos_api.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CursoServiceImpl implements CursoService {
@@ -25,8 +26,8 @@ public class CursoServiceImpl implements CursoService {
     }
 
     @Override
-    public Curso buscarPorId(Long id) {
-        return cursoRepository.findById(id).orElse(null);
+    public Optional<Curso> buscarPorId(Long id) {
+        return cursoRepository.findById(id);
     }
 
     @Override

@@ -1,10 +1,10 @@
-package com.example.universidad_soa;
+package com.example.cursos_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UniversidadSoaApplicationTests {
+class CursosApiApplicationTests {
 
 	@Test
 	void contextLoads() {

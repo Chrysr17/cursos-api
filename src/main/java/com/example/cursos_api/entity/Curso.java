@@ -1,4 +1,4 @@
-package com.example.universidad_soa.entity;
+package com.example.cursos_api.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

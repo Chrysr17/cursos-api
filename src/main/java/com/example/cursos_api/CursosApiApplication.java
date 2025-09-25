@@ -1,13 +1,13 @@
-package com.example.universidad_soa;
+package com.example.cursos_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UniversidadSoaApplication {
+public class CursosApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UniversidadSoaApplication.class, args);
+		SpringApplication.run(CursosApiApplication.class, args);
 	}
 
 }

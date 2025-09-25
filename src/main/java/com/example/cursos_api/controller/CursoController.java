@@ -1,8 +1,7 @@
-package com.example.universidad_soa.controller;
+package com.example.cursos_api.controller;
 
-
-import com.example.universidad_soa.entity.Curso;
-import com.example.universidad_soa.service.CursoService;
+import com.example.cursos_api.entity.Curso;
+import com.example.cursos_api.service.CursoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +27,9 @@ public class CursoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Curso> buscarPorId(@PathVariable Long id) {
-        Curso curso = cursoService.buscarPorId(id);
-        return curso != null ? ResponseEntity.ok(curso) : ResponseEntity.notFound().build();
+        return cursoService.buscarPorId(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
